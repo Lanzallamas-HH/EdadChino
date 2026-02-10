@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- Juego creado en base a juego "EdadDelChino.bat" by HH @2025-->
+<!-- Creado Novembre/2025 -->
+    <!-- 4.5 Última -->
+    <!-- 4.3 Añadir Media @Querys -->
+    <!-- 4.2 Juego completo funcional 10/1/26 -->
+
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EDAD Chino HH v4.5</title>
+        <link rel="icon" href="Images/favicon.ico"/> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Poppins&family=Rammetto+One&family=Revalia&family=Rubik+Dirt&family=Sevillana&family=Silkscreen&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    
+    <body>
+     <section class="section" id="sectionBienvenida"> 
+        <h1>Juego 猜猜这位中国男子的年龄</h1>
+        <h2>Hola, soy Chin-LU, y vivo en el ordenador de Enrique</h2>
+          <div id="pInicial01">
+          <img src="Images/Chino06c.jpg" width="170" alt="Dibujo de un Chino">
+            <div id="pInicial02">
+              <p>El juego consiste en acertar la <strong>edad del Chino</strong> con el menor número de intentos posibles</p>
+              <button class="btn" id="comenzarJuego" onclick="juego01()">Comenzar a Jugar</button>
+            </div>
+          </div>
+      </section>
+
+      <section class="section" id="sectionJuego01">
+          <h1>Juego 猜猜这位中国男子的年龄</h1>
+          <h2>Antes de empezar me gustaría conocerte.</h2>
+          <div id="pJuego01">
+            <img src="Images/Chino07.jpg" width="120" alt="Dibujo de un Chino">
+            <div id="pJuego02">
+              <span> ¿Cómo te llamas? </span>
+              <input class="btn" type="text" id="nJugador" placeholder="Nombre Jugador" required>
+              <button class="btn" id="enviarNombreJ" onclick="juego02()">Enviar Nombre</button>
+            </div>
+          </div>
+        </section>
+
+      <section class="section" id="sectionJuego02">  
+        <h1>Juego 猜猜这位中国男子的年龄</h1>
+        <h2 id="nombreJugador01">Tienes un bonito nombre ...</h2>
+        <p>Dime antes tu edad y te daré una pista. </p>
+        <div id="pJuego03">
+          <img src="Images/Chino07.jpg" width="120" alt="Dibujo de un Chino">
+          <div id="pJuego04">
+            <span>¿Qué edad tienes?</span>
+            <input class="btn" type="number" min="5" max="100" id="eJugador" placeholder="Escribe tu edad" required>
+            <button class="btn" id="enviarEdadJ" onclick="juego03()">Enviar Edad</button>
+          </div>
+        </div>
+      </section> 
+
+      <section class="section" id="sectionJuego03">  
+        <h1>Juego 猜猜这位中国男子的年龄</h1>
+        <h2 id="mensajeME">¡Lo siento, NO tienes la misma edad que yo!</h2>
+        <p id="mensajeMM">Eres mayor/menor que yo</p>
+        <div id="pJuego05">
+          <img src="Images/Chino07.jpg" width="120" alt="Dibujo de un Chino">
+          <div id="pJuego06">
+            <span>¿Qué edad crees que tengo?</span>
+            <input class="btn" type="number" min="25" max="100" id="adivinarEdad" required> 
+            <button class="btn" id="comprobarEdadC" onclick="juego04()">Comprobar Edad</button> 
+         </div>
+        </div>
+      </section>
+
+      <section class="sectionF" id="sectionFinal">
+          <h1>Juego 猜猜这位中国男子的年龄</h1>
+          <h2 id="mensajeFJ">BRAVO, has adivinado mi edad !!!</h2>
+        <div id="pJuego07">
+          <img src="Images/Chino08a.jpg" width="120" alt="Dibujo de un Chino">
+          <div id="pJuego08">
+            <button class="btn" id="volverJuego" onclick="limpiarInputE()">Volver a Jugar</button>
+            <button class="btn" id="recomenzarJuego" onclick="limpiarInputN()">Comenzar Juego</button>
+         </div>
+        </div>
+      </section> 
+        
+      <!-- Script para el confeti 🎉 y JS -->
+      <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+      <script src="script.js"></script>
+    </body>
+</html>

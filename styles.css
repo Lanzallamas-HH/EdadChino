@@ -1,0 +1,197 @@
+* { /* Resetear valores del navegador por defecto */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background-attachment: fixed;
+    background: linear-gradient(rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0)), url('Images/landscape-1920.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh; /* Altura de la ventana gráfica */
+    width: 100vw;  /* Ancho de la ventana gráfica */
+    overflow: hidden; /* Elimina la barra lateral de desplazamiento */
+}
+
+/* Impedimos que salgan las secciones "Juego y Final" al principio */
+#sectionJuego01, #sectionJuego02, #sectionJuego03, #sectionFinal {
+  display: none;
+}
+ 
+h1 {
+    color: blue;
+    /* font-family: "Rubik Dirt", system-ui; */
+    font-family: "Noto Sans TC", sans-serif; 
+    font-size: 30px;
+    margin: 0px auto;
+    padding: 20px;
+    text-align: center;
+    /* text-shadow: 1px 1px 1px #aaa; /* sombra */
+} 
+
+h2 {
+  margin: 0 10px;
+  text-align: center;
+}
+
+p {
+  color: brown;
+  font-family: poppins;
+  font-size: 20px;
+} 
+
+.section { 
+  background-color: rgba(245, 222, 179, 1); 
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 360px;
+  margin: 20px auto;
+  text-align: center;
+}
+.sectionF { 
+  background-color: rgba(172, 255, 47, 0.9); 
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 360px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+
+#pInicial01, #pJuego01, #pJuego03, #pJuego05, #pJuego07 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#pInicial02, #pJuego02, #pJuego04, #pJuego06, #pJuego08 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 20px;
+  align-items: center;
+}
+
+
+img { 
+  border-radius: 50%;
+}
+
+.btn {
+  border-radius: 10px;
+  color: blue;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  width: 225px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.btn:hover {
+  color: white;
+  cursor: pointer;
+  background: blue;
+  transform: scale(1.1); 
+  transition: transform 0.2s;
+}
+
+
+span { /* Efecto máquina de escribir */
+  display: block; /* Pone los objetos unos encima de otros */
+  max-width: fit-content;
+  margin-inline: auto;
+  font-family: monospace;
+  font-size: 20px; 
+  white-space: nowrap;     /*no romper la línea con los espacios en blanco*/
+  border-right: 5px solid; /*borde aparecerá a la derecha a modo de puntero*/
+  width: 30ch;             /*número de caracteres de la línea*/   
+
+  animation: typing 2s steps(12), blink .5s infinite step-end alternate;
+  /* 
+  animation-name: typing;
+  animation-duration: 2s; tiempo que tiene que durar la animación "Velocidad"
+  animation-iteration-count: infinite; Número de veces que se repite
+  animation-direction: alternate;
+  */
+  overflow: hidden; /*Elimina la barra lateral de desplazamiento; Evita que la página se vuelva más ancha que la ventana del navegador */
+}
+@keyframes typing {
+  from { width: 0 }
+  /* to { width: 100% } */
+}
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% {border-color: black };
+} 
+
+@media only screen and (max-width: 360px) { 
+  /* body {
+    background-attachment: fixed;
+    background: linear-gradient(rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0)), url('Images/landscape-1920.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 100vh; 
+    width: 100vw;  
+    overflow: hidden; 
+  } */
+  h1 {
+    color: rgb(225, 0, 255);
+    font-size: 23px;
+    margin: 15px auto;
+    padding: 10px;
+    text-align: center;
+  } 
+  .section { 
+  background-color: rgba(245, 222, 179, 1); 
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 360px; /* Ancho */
+  height: 640px; /* Altura */
+  margin: 20px auto;
+  text-align: center;
+  }
+  .sectionF { 
+    background-color: rgba(172, 255, 47, 0.9); 
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 360px;
+    height: 640px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  #pInicial01, #pJuego01, #pJuego03, #pJuego05, #pJuego07 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  }
+}
+
